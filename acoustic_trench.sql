@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2023 at 01:56 AM
+-- Generation Time: Mar 13, 2023 at 11:19 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -49,18 +49,37 @@ INSERT INTO `products` (`id`, `title`, `slug`, `content`, `img`, `price`, `old_p
 (3, 'Crafter D7/N Акустическая гитара', 'crafter-d7n-akusticeskaya-gitara', 'Описание гитары Crafter D7/N Акустическая гитара', '3.jpg', 13338, 0, 1, 0),
 (4, 'Crafter D8/N Акустическая гитара', 'crafter-d8n-akusticeskaya-gitara', 'Описание гитары Crafter D8/N Акустическая гитара', '4.jpg', 13794, 0, 0, 0),
 (5, 'Crafter D8/TS Акустическая гитара', 'crafter-d8ts-akusticeskaya-gitara', 'Описание гитары Crafter D8/TS Акустическая гитара', '5.jpg', 14165, 0, 0, 0),
-(6, 'Crafter GA30/N Акустическая гитара', 'crafter-ga30n-akusticeskaya-gitara', 'Описание гитары Crafter GA30/N Акустическая гитара', '6.jpg', 22059, 0, 0, 0),
-(7, 'Crafter GA45/N Акустическая гитара', 'crafter-ga45n-akusticeskaya-gitara', 'Описание гитары', '7.jpg', 27075, 0, 0, 0),
+(6, 'Crafter GA30/N Акустическая гитара', 'crafter-ga30n-akusticeskaya-gitara', 'Описание гитары Crafter GA30/N Акустическая гитара', '6.jpg', 22059, 0, 1, 0),
+(7, 'Crafter GA45/N Акустическая гитара', 'crafter-ga45n-akusticeskaya-gitara', 'Описание гитары', '7.jpg', 27075, 39000, 0, 1),
 (8, 'CRAFTER GA6/N Акустическая гитара', 'crafter-ga6n-akusticeskaya-gitara', 'Описание гитары CRAFTER GA6/N Акустическая гитара', '8.jpg', 12654, 0, 0, 0),
-(9, 'CRAFTER GA7/N акустическая гитара', 'crafter-ga7n-akusticeskaya-gitara', 'Описание гитары CRAFTER GA7/N акустическая гитара', '9.jpg', 13367, 0, 0, 0),
-(10, 'CRAFTER GA8/BK акустическая гитара', 'crafter-ga8bk-akusticeskaya-gitara', 'Описание гитары CRAFTER GA8/BK акустическая гитара', '10.jpg', 13794, 0, 0, 0),
+(9, 'CRAFTER GA7/N акустическая гитара', 'crafter-ga7n-akusticeskaya-gitara', 'Описание гитары CRAFTER GA7/N акустическая гитара', '9.jpg', 13367, 0, 1, 0),
+(10, 'CRAFTER GA8/BK акустическая гитара', 'crafter-ga8bk-akusticeskaya-gitara', 'Описание гитары CRAFTER GA8/BK акустическая гитара', '10.jpg', 13794, 15290, 0, 1),
 (11, 'CRAFTER GA8/N Акустическая гитара', 'crafter-ga8n-akusticeskaya-gitara', 'Описание гитары CRAFTER GA8/N Акустическая гитара', '11.jpg', 13794, 0, 0, 0),
 (12, 'Crafter HiLITE-T CD/N Акустическая гитара', 'crafter-hilite-t-cdn-akusticeskaya-gitara', 'Описание гитары Crafter HiLITE-T CD/N Акустическая гитара', '12.jpg', 10175, 0, 0, 0),
 (13, 'Crafter J15/N акустическая гитара', 'crafter-j15n-akusticeskaya-gitara', 'Описание гитары Crafter J15/N акустическая гитара', '13.jpg', 16743, 0, 0, 0),
-(14, 'CRAFTER J18/N акустическая гитара. джамбо', 'crafter-j18n-akusticeskaya-gitara', 'Описание гитары CRAFTER J18/N акустическая гитара', '14.jpg', 17271, 0, 0, 0),
+(14, 'CRAFTER J18/N акустическая гитара. джамбо', 'crafter-j18n-akusticeskaya-gitara', 'Описание гитары CRAFTER J18/N', '14.jpg', 18271, 0, 1, 0),
 (15, 'Crafter LITE-D SP/N Акустическая гитара', 'crafter-lite-d-spn-akusticeskaya-gitara', 'Описание гитары Crafter LITE-D SP/N Акустическая гитара', '15.jpg', 10545, 0, 0, 0),
-(16, 'Crafter MD-42/TR Акустическая гитара', 'crafter-md-42tr-akusticeskaya-gitara', 'Описание гитары Crafter MD-42/TR Акустическая гитара', '16.jpg', 9006, 0, 0, 0),
-(17, 'CRAFTER TA070/Light Amber Акустическая гитара', 'crafter-ta070light-amber-akusticeskaya-gitara', 'Описание гитары CRAFTER TA070/Light Amber Акустическая гитара', 'no-image.png', 20378, 0, 0, 0);
+(16, 'Crafter MD-42/TR Акустическая гитара', 'crafter-md-42tr-akusticeskaya-gitara', 'Описание гитары Crafter MD-42/TR Акустическая гитара', '16.jpg', 9006, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
+(7, 'Vasily', '$2y$10$5VSuiEa5nCiUvUXO3dWpgODrlJMBMKy/p394TidTLp8SctofLnJsC', 'povaroww@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -73,6 +92,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -81,6 +106,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
