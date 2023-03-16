@@ -125,6 +125,12 @@ ul {
   max-height: 500px;
 }
 
+.user_info__article {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
 .btn {
   color: #fff;
   background-color: #3a174a;
@@ -138,9 +144,33 @@ ul {
   border-radius: 10px;
 }
 
+.link {
+  color: #3a174a;
+}
+
+.flex__container {
+  flex-wrap: wrap-reverse;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 350px;
+}
+
+.flex__item-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: baseline;
+}
+
+.personal_offers__btn {
+  max-width: 125px;
+}
+
 .add-to-cart:hover,
 .btn-check_out:hover,
-.sign-up_form button:hover {
+.sign-up_form button:hover,
+.personal_offers__btn:hover {
   background-color: #5c2377;
   color: #fff;
   border: 2px solid #5c2377;
@@ -163,7 +193,8 @@ ul {
   text-decoration: none;
 }
 
-.table a:hover {
+.table a:hover,
+.link:hover {
   color: #5c2377;
 }
 
@@ -267,8 +298,12 @@ ul {
   text-align: center;
 }
 
-/* Forms */
+.user .logout_link {
+  color: #3a174a;
+  margin-left: 18px;
+}
 
+/* Forms */
 .sign-up_form {
   background-color: #fff;
   display: flex;
@@ -287,14 +322,14 @@ ul {
   margin-bottom: 25px;
 }
 
-.sign-up_form button{
+.sign-up_form button {
   font-size: 20px;
   width: 215px;
   padding: 10px;
   border-radius: 10px;
 }
 
-.sign-up_form input{
+.sign-up_form input {
   padding: 10px;
 }
 
@@ -302,14 +337,13 @@ ul {
   display: flex;
   align-items: center;
   gap: 15px;
-  
 }
-.form__link-list .list__item a{
+.form__link-list .list__item a {
   text-decoration: none;
   color: rgba(109, 109, 109, 0.7);
 }
 
-.form__link-list .list__item a:hover{
+.form__link-list .list__item a:hover {
   transition: 0.4s;
   color: #5c2377;
 }
