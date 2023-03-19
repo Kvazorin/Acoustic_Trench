@@ -8,24 +8,24 @@ function debug(array $data): void
 function get_products(): array
 {
     global $pdo;
-    $res = $pdo->query("SELECT * FROM products");
+    $res = $pdo->query("SELECT * FROM `products` JOIN `products_status` on products.id_product=products_status.id_product JOIN `products_price` on products.id_product=products_price.id_product");
     return $res->fetchAll();
 }
 
 function get_product(int $id): array|false
 {
     global $pdo;
-    $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+    $stmt = $pdo->prepare("SELECT * FROM products JOIN products_price on products.id_product=products_price.id_product WHERE id = ?");
     $stmt->execute([$id]);
     return $stmt->fetch();
 }
 
 function add_to_cart($product): void
 {
-    if (isset($_SESSION['cart'][$product['id']])) {
-        $_SESSION['cart'][$product['id']]['qty'] += 1;
+    if (isset($_SESSION['cart'][$product['id_product']])) {
+        $_SESSION['cart'][$product['id_product']]['qty'] += 1;
     } else {
-        $_SESSION['cart'][$product['id']] = [
+        $_SESSION['cart'][$product['id_product']] = [
             'title' => $product['title'],
             'slug' => $product['slug'],
             'price' => $product['price'],
