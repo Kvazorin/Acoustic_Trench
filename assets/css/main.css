@@ -31,9 +31,8 @@ ul {
 }
 
 .product-cards {
-  gap: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -43,9 +42,10 @@ ul {
   position: relative;
   float: left;
   width: 230px;
-  height: 410px;
+  height: 425px;
   word-wrap: break-word;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .product-card:hover {
@@ -59,6 +59,12 @@ ul {
   left: 5px;
   z-index: 10;
   text-transform: uppercase;
+}
+
+.card-image_flex-card,
+.product-price_flex-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .offer > div {
@@ -104,11 +110,15 @@ ul {
   margin-bottom: 5px;
 }
 
-.card-price del,
-.product-buy del {
+.card-price_lrg{
+  font-size: 28px;
+}
+
+.card-price>del,
+.product-buy>del {
   position: absolute;
-  top: 255px;
-  font-size: 18px;
+  top: 265px;
+  font-size: 20px;
 }
 
 .cart-modal img {
@@ -117,7 +127,6 @@ ul {
 
 .product-item-thumb {
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 4px;
 }
 

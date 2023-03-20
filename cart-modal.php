@@ -1,5 +1,6 @@
 <div class="modal-body">
     <?php $products = get_products(); ?>
+
     <?php if (!empty($_SESSION['cart'])) : ?>
         <table class="table">
             <thead>
@@ -13,8 +14,8 @@
             <tbody>
                 <?php foreach ($_SESSION['cart'] as $id => $item) : ?>
                     <tr>
-                        <td><a href="#"><img src="img/<?= $item['img'] ?>" alt="<?= $item['title'] ?>"></a></td>
-                        <td><a href="#"><?= $item['title'] ?></a></td>
+                        <td><a href="product.php?slug=<?= $item['slug'] ?>"><img src="img/<?= $item['img'] ?>" alt="<?= $item['title'] ?>"></a></td>
+                        <td><a href="product.php?slug=<?= $item['slug'] ?>"><?= $item['title'] ?></a></td>
                         <td><?= number_format($item['price'], 0, '', ' ') ?></td>
                         <td><?= $item['qty'] ?></td>
                     </tr>

@@ -20,6 +20,14 @@ function get_product(int $id): array|false
     return $stmt->fetch();
 }
 
+function info_product(): array
+{
+    $slug = $_GET['slug'] ?? null;
+    global $pdo;
+    $result = $pdo->query("SELECT * FROM `products` JOIN `products_status` on products.id_product=products_status.id_product JOIN `products_price` on products.id_product=products_price.id_product WHERE slug = '$slug'");
+    return $result->fetchAll();
+}
+
 function add_to_cart($product): void
 {
     if (isset($_SESSION['cart'][$product['id_product']])) {
