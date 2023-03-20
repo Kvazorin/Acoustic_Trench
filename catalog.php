@@ -10,7 +10,7 @@ require('components/header.php');
 
 <div class="container">
     <h1 class="mt-5">Каталог</h1>
-    <div class="row mt-5">
+    <div class="row mt-5 row_space-between">
         <div class="product-cards mb-5">
             <?php if (!empty($products)) : ?>
                 <?php foreach ($products as $product) : ?>

@@ -52,7 +52,7 @@ $url = $_SERVER["REQUEST_URI"];
                 </ul>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                    <button class="btn search-btn" type="submit">Найти</button>
+                    <button class="btn search-btn" type="#">Найти</button>
                 </form>
             </div>
         </div>
