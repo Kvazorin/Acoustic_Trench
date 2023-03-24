@@ -9,57 +9,67 @@ require('components/header.php');
 <title>Главная</title>
 
 <main>
-    <div class="container">
-        <h2 class="mt-4 mb-3">Хиты продаж</h2>
-        <div class="row">
-            <div class="slider">
-                <div class="slider-nav">
-                    <button class="slider-prev" id="prev"><i class='fas fa-angle-left'></i></button>
-                    <button class="slider-next" id="next"><i class='fas fa-angle-right'></i></button>
-                </div>
-                <div class="slider-line">
-                    <div class="product-cards_slider mb-5">
-                        <?php if (!empty($products)) : ?>
-                            <?php foreach ($products as $product) : ?>
-                                <?php if ($product['hit']) : ?>
-                                    <div class="product-card" id="last-item">
-                                        <div class="offer">
-                                            <?php if ($product['hit']) : ?>
-                                                <div class="offer-hit">Hit</div>
-                                            <?php endif; ?>
-                                        </div>
-                                        <div class="card-thumb">
-                                            <a href="product.php?slug=<?= $product['slug'] ?>"><img src="img/<?= $product['img'] ?>" alt="<?= $product['title'] ?>"></a>
-                                        </div>
-                                        <div class="card-caption">
-                                            <div class="card-title mb-0">
-                                                <a href="product.php?slug=<?= $product['slug'] ?>"><?= $product['title'] ?></a>
-                                            </div>
-                                            <br>
-                                            <div class="card-price text-left">
-                                                <?php if ($product['old_price']) : ?>
-                                                    <del><?= number_format($product['old_price'], 0, '', ' ') ?></del>
-                                                <?php endif; ?>
-                                                <?= number_format($product['price'], 0, '', ' ') ?> руб.
-                                            </div>
-                                            <a href="?cart=add&id=<?= $product['id'] ?>" class="btn btn-block add-to-cart" data-id="<?= $product['id'] ?>">
-                                                Добавить в корзину
-                                            </a>
-                                            <div class="item-status"><i class="fas fa-check"></i> В наличии</div>
-                                        </div>
-                                    </div><!-- /product-card -->
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
-                </div><!-- /product-cards -->
+    <!-- Main slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slider-item">
+                <img src="img/slider-item1.jpg" alt="slider-item(1)">
             </div>
-        </div><!-- /row -->
+            <div class="slider-item">
+                <img src="img/slider-item2.jpg" alt="slider-item(2)">
+            </div>
+            <div class="slider-item">
+                <img src="img/slider-item3.jpg" alt="slider-item(3)">
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slick-next"></div>
+            <div class="slick-prev"></div>
+        </div>
+    </div>
 
+    <div class="container">
+        <section class="hits">
+            <h2 class="mt-4 mb-3">Хиты продаж</h2>
+            <div class="slider-small">
+                <?php if (!empty($products)) : ?>
+                    <?php foreach ($products as $product) : ?>
+                        <?php if ($product['hit']) : ?>
+                            <div class="product-card ml-4">
+                                <div class="offer">
+                                    <?php if ($product['hit']) : ?>
+                                        <div class="offer-hit">Hit</div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="card-thumb">
+                                    <a href="product.php?slug=<?= $product['slug'] ?>"><img src="img/<?= $product['img'] ?>" alt="<?= $product['title'] ?>"></a>
+                                </div>
+                                <div class="card-caption">
+                                    <div class="card-title mb-0">
+                                        <a href="product.php?slug=<?= $product['slug'] ?>"><?= $product['title'] ?></a>
+                                    </div>
+                                    <br>
+                                    <div class="card-price text-left">
+                                        <?php if ($product['old_price']) : ?>
+                                            <del><?= number_format($product['old_price'], 0, '', ' ') ?></del>
+                                        <?php endif; ?>
+                                        <?= number_format($product['price'], 0, '', ' ') ?> руб.
+                                    </div>
+                                    <a href="?cart=add&id=<?= $product['id'] ?>" class="btn btn-block add-to-cart" data-id="<?= $product['id'] ?>">
+                                        Добавить в корзину
+                                    </a>
+                                    <div class="item-status"><i class="fas fa-check"></i> В наличии</div>
+                                </div>
+                            </div><!-- /product-card -->
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div><!-- hits-slider -->
+        </section>
 
-        <h2 class="mt-4 mb-3">Скидки</h2>
-        <div class="row row_space-between">
-            <div class="product-cards mb-5">
+        <section class="sales">
+            <h2 class="mt-4 mb-3">Скидки</h2>
+            <div class="slider-small">
                 <?php if (!empty($products)) : ?>
                     <?php foreach ($products as $product) : ?>
                         <?php if ($product['sale']) : ?>
@@ -78,7 +88,6 @@ require('components/header.php');
                                     </div>
                                     <br>
                                     <div class="card-price text-left">
-
                                         <?php if ($product['old_price']) : ?>
                                             <del><?= number_format($product['old_price'], 0, '', ' ') ?></del>
                                         <?php endif; ?>
@@ -93,13 +102,9 @@ require('components/header.php');
                         <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
-            </div><!-- /product-cards -->
-        </div><!-- /row -->
-
-
+            </div><!-- sales-slider -->
+        </section>
     </div><!-- /container -->
-
-
 
     <!-- Modal -->
     <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,0 +1,22 @@
+{
+  "name": "acoustic_trench",
+  "version": "1.0.0",
+  "description": "Small web-application for musical instruments marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kvazorin/Acoustic_Trench.git"
+  },
+  "author": "Kvazorin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kvazorin/Acoustic_Trench/issues"
+  },
+  "homepage": "https://github.com/Kvazorin/Acoustic_Trench#readme",
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

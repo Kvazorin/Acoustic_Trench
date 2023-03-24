@@ -61,29 +61,47 @@ $(function () {
 });
 
 //Slider - JS
+$(".slider").slick({
+  slidesToShow: 1,
+  slidesToScroll: 3,
+  autoplay: true,
+  variableWidth: true,
+  autoplaySpeed: 4500,
+  infinite: true,
+  centerMode: true,
+  prevArrow: $(".slick-prev"),
+  nextArrow: $(".slick-next"),
+});
+$(".slider-small").slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  draggable: true,
+  autoplay: false,
+  variableWidth: true,
+  infinite: false,
+  centerMode: false,
+  dots: true,
+  prevArrow: false,
+  nextArrow: false,
+  _responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
 
-let offset = 0;
-let sliderLine = document.querySelector(".slider-line");
-let btnNext = document.getElementById("next");
-let btnPrev = document.getElementById("prev");
-
-function SliderPrev() {
-  offset = offset -= 240;
-  if (offset < 0) {
-    offset = 0;
-  }
-  sliderLine.style.left = -offset + "px";
-}
-
-btnPrev.addEventListener("click", SliderPrev);
-
-function SliderNext() {
-  offset = offset += 240;
-  if (offset > 720) {
-    offset = 0;
-  }
-  sliderLine.style.left = -offset + "px";
-}
-
-btnNext.addEventListener("click", SliderNext);
-setInterval(() => SliderNext(), 4000);
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ],
+  get responsive() {
+    return this._responsive;
+  },
+  set responsive(value) {
+    this._responsive = value;
+  },
+});
