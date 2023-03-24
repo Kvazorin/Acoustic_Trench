@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="footer_inner mt-5">
                     <div class="footer__item">
-                        <a href="#"><img src="img/footer_logo.png" alt="footer_logo" class="footer__logo"></a>
+                        <a href="index.php"><img src="img/footer_logo.png" alt="footer_logo" class="footer__logo"></a>
                     </div>
                     <div class="footer__item">
                         <ul class="footer__nav">

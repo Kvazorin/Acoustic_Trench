@@ -507,8 +507,9 @@ pre code {
   margin-left: -15px;
 }
 
-.row_space-between{
+.row_space-between {
   justify-content: space-between;
+  gap: 20px;
 }
 
 .no-gutters {
@@ -1895,8 +1896,8 @@ pre code {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control_padding{
-  padding: 0.375rem 0.75rem
+.form-control_padding {
+  padding: 0.375rem 0.75rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1913,7 +1914,7 @@ pre code {
   text-shadow: 0 0 0 #495057;
 }
 .form-control:focus {
-  color: #3A174A;
+  color: #3a174a;
   background-color: #fff;
   outline: 2px solid #3a174a;
 }
@@ -1951,7 +1952,7 @@ input[type="time"].form-control {
   appearance: none;
 }
 select.form-control:focus::-ms-value {
-  color: #3A174A;
+  color: #3a174a;
   background-color: #fff;
 }
 .form-control-file,
@@ -5593,7 +5594,6 @@ a.close.disabled {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 5px 20px 10px 20px;
-
 }
 .modal-footer {
   display: -ms-flexbox;

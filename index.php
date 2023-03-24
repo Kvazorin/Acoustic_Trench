@@ -58,7 +58,7 @@ require('components/header.php');
 
 
         <h2 class="mt-4 mb-3">Скидки</h2>
-        <div class="row">
+        <div class="row row_space-between">
             <div class="product-cards mb-5">
                 <?php if (!empty($products)) : ?>
                     <?php foreach ($products as $product) : ?>
