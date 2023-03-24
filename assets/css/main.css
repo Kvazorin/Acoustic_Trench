@@ -31,9 +31,17 @@ ul {
 }
 
 .product-cards {
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.product-cards_slider {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .product-card {
@@ -370,6 +378,53 @@ ul {
 .form-inline input::placeholder {
   color: #bebebe;
 }
+
+/* Slider - JS */
+
+.last-item {
+  width: 256px;
+  height: 256px;
+}
+.slider{
+  overflow: hidden;
+}
+.slider-line{
+  height: 430px;
+  width: 1175px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.slider-nav{
+  position: absolute;
+  z-index: 10;
+  top: 310px;
+}
+
+.slider-next,
+.slider-prev{
+  position: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+}
+
+.slider-prev{
+  right: -10px;
+}
+
+.slider-next{
+  left: 1170px;
+}
+
+.slider-next:focus,
+.slider-prev:focus{
+  outline: none;
+  border: none;
+}
+
 
 @media (max-width: 991px) {
   #get-cart {
