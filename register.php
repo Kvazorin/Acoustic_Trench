@@ -34,7 +34,7 @@ include('inc/db.php');
                     $query->bindParam("email", $email, PDO::PARAM_STR);
                     $query->execute();
                     if ($query->rowCount() > 0) {
-                        echo '<p class="error">Этот адрес уже зарегистрирован!</p>';
+                        echo '<p class="sign-up_form mb-3">Этот адрес уже зарегистрирован!</p>';
                     }
                     if ($query->rowCount() == 0) {
                         $query = $pdo->prepare("INSERT INTO users(username,password,email) VALUES (:username,:password_hash,:email)");
@@ -43,10 +43,11 @@ include('inc/db.php');
                         $query->bindParam("email", $email, PDO::PARAM_STR);
                         $result = $query->execute();
                         if ($result) {
-                            echo '<p class="success">Регистрация прошла успешно!<br> Вы будете перенаправлены на страницу авторизации.</p>';
+                            echo '<p class="sign-up_form mb-3">Регистрация прошла успешно!</p>
+                            <p class= "sign-up_form mb-3"> Вы будете перенаправлены на страницу авторизации. </p>';
                             header("refresh:3; url=login.php");
                         } else {
-                            echo '<p class="error">Неверные данные!</p>';
+                            echo '<p class="sign-up_form mb-3">Неверные данные!</p>';
                         }
                     }
                 }

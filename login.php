@@ -9,14 +9,14 @@ if (isset($_POST['login'])) {
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
     if (!$result) {
-        echo '<p class="error">Неверные пароль или имя пользователя!</p>';
+        echo '<p class="sign-up_form">Неверные пароль или имя пользователя!</p>';
     } else {
         if (password_verify($password, $result['password'])) {
             $_SESSION['user_id'] = $result['id'];
             $_SESSION['username'] = $username;
             header('Location: account.php');
         } else {
-            echo '<p class="error"> Неверные пароль или имя пользователя!</p>';
+            echo '<p class="sign-up_form"> Неверные пароль или имя пользователя!</p>';
         }
     }
 }
