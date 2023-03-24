@@ -1,3 +1,4 @@
+<?php ?>
 <footer class="footer_main">
     <div class="container">
         <div class="footer_inner mt-5">
