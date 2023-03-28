@@ -36,6 +36,6 @@
     <button type="button" class="btn btn-close_cart" data-dismiss="modal">Закрыть</button>
     <?php if (!empty($_SESSION['cart'])) : ?>
         <button type="button" class="btn btn-danger" id="clear-cart">Очистить корзину</button>
-        <button type="button" class="btn btn-check_out">Оформить заказ</button>
+        <button type="button" class="btn btn-check_out"><a href="order.php">Оформить заказ</a></button>
     <?php endif; ?>
 </div>
