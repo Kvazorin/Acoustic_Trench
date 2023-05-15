@@ -1,4 +1,4 @@
 <?php
 Session_start();
 Session_destroy();
-header('Location: ../index.php');
+header('Location: https://acoustic-trench.ru');

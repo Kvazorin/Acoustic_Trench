@@ -3,15 +3,15 @@
     <div class="container">
         <div class="footer_inner mt-5">
             <div class="footer__item">
-                <a href="index.php"><img src="img/footer_logo.png" alt="footer_logo" class="footer__logo"></a>
+                <a href="https://acoustic-trench.ru"><img src="img/footer_logo.png" alt="footer_logo" class="footer__logo"></a>
             </div>
             <div class="footer__item">
                 <ul class="footer__nav">
                     <li class="nav__item">
-                        <a class="nav__link" href="/index.php">Главная</a>
+                        <a class="nav__link" href="https://acoustic-trench.ru">Главная</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="/catalog.php">Гитары</a>
+                        <a class="nav__link" href="https://acoustic-trench.ru/catalog.php">Гитары</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="#">Гитарное оборудование</a>

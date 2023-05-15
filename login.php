@@ -55,10 +55,10 @@ if (isset($_POST['login'])) {
 
                     <ul class="form__link-list">
                         <li class="list__item">
-                            <a href="register.php">Регистрация</a>
+                            <a href="https://acoustic-trench.ru/register.php">Регистрация</a>
                         </li>
                         <li class="list__item">
-                            <a href="index.php">На Главную</a>
+                            <a href="https://acoustic-trench.ru">На Главную</a>
                         </li>
                     </ul>
 

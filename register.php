@@ -68,10 +68,10 @@ include('inc/db.php');
                     </div>
                     <ul class="form__link-list">
                         <li class="list__item">
-                            <a href="login.php">Авторизация</a>
+                            <a href="https://acoustic-trench.ru/login.php">Авторизация</a>
                         </li>
                         <li class="list__item">
-                            <a href="index.php">На Главную</a>
+                            <a href="https://acoustic-trench.ru">На Главную</a>
                         </li>
                     </ul>
                     <button class="btn" type="submit" name="register" value="register">Отправить</button>

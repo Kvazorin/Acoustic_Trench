@@ -74,7 +74,7 @@ require('components/header.php');
                 <?php if (!empty($products)) : ?>
                     <?php foreach ($products as $product) : ?>
                         <?php if ($product['sale']) : ?>
-                            <div class="product-card">
+                            <div class="product-card ml-4">
                                 <div class="offer">
                                     <?php if ($product['sale']) : ?>
                                         <div class="offer-sale">Sale</div>
