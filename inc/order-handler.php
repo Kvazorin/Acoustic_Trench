@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 $username = htmlspecialchars($_POST['username']);
 $email = htmlspecialchars($_POST['email']);
 $phone_number = htmlspecialchars($_POST['phone_number']);
+$uuid_token = create_token();
 
 // Defining items in cart
 foreach ($_SESSION['cart'] as $id => $item) {
@@ -20,8 +21,8 @@ foreach ($_SESSION['cart'] as $id => $item) {
     $product_quantity = $item['qty'];
 
     // Preparing SQL-request
-    $sql = "INSERT INTO orders (username, email, phone_number, id_product, price, quantity) 
-                VALUES (:username, :email, :phone_number, :id_product, :price, :quantity)";
+    $sql = "INSERT INTO orders (username, email, phone_number, id_product, price, quantity, UUID) 
+                VALUES (:username, :email, :phone_number, :id_product, :price, :quantity, :UUID)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':email', $email);
@@ -29,6 +30,7 @@ foreach ($_SESSION['cart'] as $id => $item) {
     $stmt->bindParam(':id_product', $product_id);
     $stmt->bindParam(':price', $product_price);
     $stmt->bindParam(':quantity', $product_quantity);
+    $stmt->bindParam(':UUID', $uuid_token);
 
     // Executing request
     $stmt->execute();

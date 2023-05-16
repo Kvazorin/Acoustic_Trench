@@ -45,3 +45,12 @@ function add_to_cart($product): void
     $_SESSION['cart.qty'] = !empty($_SESSION['cart.qty']) ? ++$_SESSION['cart.qty'] : 1;
     $_SESSION['cart.sum'] = !empty($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $product['price'] : $product['price'];
 }
+
+function create_token()
+{
+    $uni_code = md5(uniqid(rand(), true));
+    $rand_code = bin2hex(random_bytes(8));
+    $uuid_token = (string)$uni_code . $rand_code;
+    $uuid_token = $uni_code;
+    return $uuid_token;
+}
