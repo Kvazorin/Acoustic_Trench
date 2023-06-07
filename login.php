@@ -29,6 +29,7 @@ if (isset($_POST['login'])) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Страница авторизации Acoustic Trench">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -55,10 +56,10 @@ if (isset($_POST['login'])) {
 
                     <ul class="form__link-list">
                         <li class="list__item">
-                            <a href="https://acoustic-trench.ru/register.php">Регистрация</a>
+                            <a href="register.php">Регистрация</a>
                         </li>
                         <li class="list__item">
-                            <a href="https://acoustic-trench.ru">На Главную</a>
+                            <a href="index.php">На Главную</a>
                         </li>
                     </ul>
 

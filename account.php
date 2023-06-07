@@ -5,7 +5,6 @@ require_once __DIR__ . '/inc/db.php';
 require_once __DIR__ . '/inc/funcs.php';
 require('components/header.php');
 ?>
-
 <title>Аккаунт</title>
 
 <?php
@@ -33,7 +32,7 @@ if (!isset($_SESSION['user_id'])) {
                             <a class="logout_link link" style="font-size: 16px;" href="inc/logout.php">Выйти</a>
                         </h3>
 
-                        <table class="table" style="width: 472px;">
+                        <table class="table" style="width: auto;">
                             <thead>
                                 <tr>
                                     <th scope="col" style="padding-left: 0;">Платежные данные</th>
